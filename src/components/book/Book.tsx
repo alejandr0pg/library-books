@@ -1,8 +1,9 @@
-import { HeartIcon, LinkIcon } from '@heroicons/react/16/solid';
 import React from 'react';
-import { IBook } from '../../interfaces/books.interface';
 import clsx from 'clsx';
+
+import { HeartIcon, LinkIcon } from '@heroicons/react/16/solid';
 import { useMyFavoriteStore } from '../../stores/myFavoritesBooks.store';
+import { IBook } from '../../interfaces/books.interface';
 
 interface IProps {
   book: IBook;
@@ -22,7 +23,10 @@ const Book: React.FunctionComponent<IProps> = ({ book }) => {
     isFavorite ? removeFavorite(book) : addFavorite(book);
 
   return (
-    <div className="card bg-base-100 image-full w-96 md:w-80 lg:w-56 shadow-xl max-h-80 z-0">
+    <div
+      className="card bg-base-100 image-full w-96 md:w-80 lg:w-56 shadow-xl max-h-80 z-0 cursor-pointer"
+      onDoubleClick={toogleFavorite}
+    >
       <figure>
         <img src={cover} alt={title} />
       </figure>
@@ -45,7 +49,10 @@ const Book: React.FunctionComponent<IProps> = ({ book }) => {
             <LinkIcon className="size-4 text-blue-400" />
             <small>Ver mas</small>
           </a>
-          <button className="btn btn-default btn-sm" onClick={toogleFavorite}>
+          <button
+            className="btn btn-default btn-sm z-1"
+            onClick={toogleFavorite}
+          >
             <HeartIcon
               className={clsx('size-4', {
                 'text-red-400': isFavorite,

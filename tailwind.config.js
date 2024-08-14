@@ -6,6 +6,29 @@ export default {
   },
   plugins: [require('daisyui')],
   daisyui: {
-    themes: ['dark', 'cupcake'],
+    themes: [
+      {
+        dark: {
+          ...require('daisyui/src/theming/themes')['dark'],
+          '--rounded-btn': require('daisyui/src/theming/themes')['cupcake'][
+            '--rounded-btn'
+          ],
+          '.card:hover.image-full:before': {
+            opacity: 0.9,
+          },
+        },
+      },
+      {
+        cupcake: {
+          ...require('daisyui/src/theming/themes')['cupcake'],
+          '.card.image-full:before': {
+            opacity: 0.55,
+          },
+          '.card:hover.image-full:before': {
+            opacity: 0.8,
+          },
+        },
+      },
+    ],
   },
 };
