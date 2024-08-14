@@ -1,6 +1,8 @@
 # JELOU AI TEST
 
-Esta aplicación es una solución web moderna y escalable construida con Angular 17, diseñada para crear un listado de libros favoritos o para leer.
+Esta aplicación es una solución web moderna y escalable construida con React 18, diseñada para crear un listado de libros favoritos o para leer.
+
+DEMO: https://jelou-ai.netlify.app/
 
 ### Características Principales
 
@@ -35,26 +37,26 @@ Sigue estos pasos para levantar el proyecto en tu máquina local:
 
 2. **Instala las dependencias**
 
-Asegúrate de estar en el directorio del proyecto y ejecuta:
+   Asegúrate de estar en el directorio del proyecto y ejecuta:
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
-### Configura el entorno
+3. **Configura el entorno**
 
-Crea un archivo .env en la raíz del proyecto y define las variables de entorno necesarias. Puedes basarte en el archivo .env.example para configurarlo.
+   Crea un archivo .env en la raíz del proyecto y define las variables de entorno necesarias. Puedes basarte en el archivo .env.example para configurarlo.
 
-### Levanta el servidor de desarrollo
+4. **Levanta el servidor de desarrollo**
 
-Una vez que las dependencias estén instaladas, ejecuta el siguiente comando para iniciar el servidor:
+   Una vez que las dependencias estén instaladas, ejecuta el siguiente comando para iniciar el servidor:
 
-```bash
-ng serve
-```
+   ```bash
+   ng serve
+   ```
 
-Esto levantará la aplicación en http://localhost:4200/ por defecto.
+   Esto levantará la aplicación en http://localhost:4200/ por defecto.
 
 ### Uso
 
-Una vez que la aplicación esté corriendo, abre tu navegador y dirígete a http://localhost:4200/ para ver la aplicación en acción.
+Una vez que la aplicación esté corriendo, abre tu navegador y dirígete a http://localhost:4200/ para ver la aplicación en acción o entra a la direccion de produccion https://jelou-ai.netlify.app/
