@@ -1,50 +1,60 @@
-# React + TypeScript + Vite
+# JELOU AI TEST
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta aplicación es una solución web moderna y escalable construida con Angular 17, diseñada para crear un listado de libros favoritos o para leer.
 
-Currently, two official plugins are available:
+### Características Principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Interfaz de Usuario Interactiva**: Ofrece una experiencia de usuario amigable, con un diseño moderno y adaptado a dispositivos móviles.
 
-## Expanding the ESLint configuration
+- **Gestión de Estado con Zustand**: Utiliza Zustand para gestionar el estado de la aplicación de manera eficiente, permitiendo una rápida respuesta a las acciones del usuario.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Persistencia de Datos**: Los datos se almacenan en `localStorage`, lo que permite que la información se mantenga entre sesiones y se recupere incluso después de recargar la página.
 
-- Configure the top-level `parserOptions` property like this:
+- **Optimización del Rendimiento**: La aplicación está optimizada para ofrecer un rendimiento superior, con tiempos de carga reducidos y una respuesta rápida a las interacciones del usuario.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **Modularidad y Escalabilidad**: El código está estructurado de manera modular, facilitando la ampliación de características y el mantenimiento a largo plazo.
+
+### Tecnologías Utilizadas
+
+- **React 18**: El framework principal para el desarrollo de la aplicación.
+- **Zustand**: Para la gestión del estado de la aplicación.
+- **TypeScript**: Para una mayor seguridad y facilidad en el desarrollo del código.
+- **Tailwind Css**: Framework css para un mejor diseño y responsivo.
+- **Daisy UI**: Sistema de diseño basado en Tailwind
+
+## Instalación
+
+Sigue estos pasos para levantar el proyecto en tu máquina local:
+
+1. **Clona el repositorio**
+
+   ```bash
+   git clone https://github.com/alejandr0pg/library-books.git
+   cd library-books
+   ```
+
+2. **Instala las dependencias**
+
+Asegúrate de estar en el directorio del proyecto y ejecuta:
+
+```bash
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Configura el entorno
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Crea un archivo .env en la raíz del proyecto y define las variables de entorno necesarias. Puedes basarte en el archivo .env.example para configurarlo.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+### Levanta el servidor de desarrollo
+
+Una vez que las dependencias estén instaladas, ejecuta el siguiente comando para iniciar el servidor:
+
+```bash
+ng serve
 ```
+
+Esto levantará la aplicación en http://localhost:4200/ por defecto.
+
+### Uso
+
+Una vez que la aplicación esté corriendo, abre tu navegador y dirígete a http://localhost:4200/ para ver la aplicación en acción.
